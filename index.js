@@ -1,0 +1,1 @@
+console.log("HELLO AUTOMATIC_HABIT_RECORDER!!!!")
