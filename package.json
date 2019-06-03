@@ -1,0 +1,28 @@
+{
+  "name": "automatic_habit_recorder",
+  "version": "1.0.0",
+  "description": "automatic habit recorder",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThreeSnakes/automatic_habit_recorder.git"
+  },
+  "keywords": [
+    "automatic",
+    "habit",
+    "recorder"
+  ],
+  "author": "ThreeSnakes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThreeSnakes/automatic_habit_recorder/issues"
+  },
+  "homepage": "https://github.com/ThreeSnakes/automatic_habit_recorder#readme",
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  }
+}
