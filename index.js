@@ -1,7 +1,7 @@
-console.log("HELLO AUTOMATIC_HABIT_RECORDER!!!!")
+console.info("HELLO AUTOMATIC_HABIT_RECORDER!!!!");
 
 module.exports = {
   test: () => {
-    return "TEST"
+    return "TEST";
   }
-}
+};
