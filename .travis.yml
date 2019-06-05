@@ -3,17 +3,18 @@ node_js:
   - "8.9.3"
 
 env:
-  - FRAMEWORK=mocha CMD="mocha tests/chai.js tests/unit-js.js -R json" OUTFILE=mocha.json INSTALL="mocha chai unit.js" ANNOTATE_LOG=true
+  - FRAMEWORK=mocha CMD="mocha -R json" OUTFILE=mocha.json INSTALL="mocha chai unit.js" ANNOTATE_LOG=true
 
 install:
   - npm install
+  - set -o pipefail
 
 script:
   - $CMD 2> build.log | tee $OUTFILE
   - cat build.log
 
 after_failure:
-  - if [ "$ANNOTATE_LOG" != false ]; then curl -s https://raw.githubusercontent.com/report-ci/scripts/master/annotate.py | python - --tool node --input build.log --name $FRAMEWORK ; fi
+  - if [ "$ANNOTATE_LOG" != false ]; then curl -s https://report.ci/upload.py | python - --include='*.json' --framework=mocha
 
 after_script:
-  - curl -s https://raw.githubusercontent.com/report-ci/scripts/master/upload.py | python - --framework=$FRAMEWORK
+  - curl -s https://report.ci/upload.py | python - --include='*.json' --framework=mocha
