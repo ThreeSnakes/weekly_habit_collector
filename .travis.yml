@@ -7,14 +7,7 @@ env:
 
 install:
   - npm install
-  - set -o pipefail
 
 script:
   - $CMD 2> build.log | tee $OUTFILE
   - cat build.log
-
-after_failure:
-  - if [ "$ANNOTATE_LOG" != false ]; then curl -s https://report.ci/upload.py | python - --include='*.json' --framework=mocha
-
-after_script:
-  - curl -s https://report.ci/upload.py | python - --include='*.json' --framework=mocha
