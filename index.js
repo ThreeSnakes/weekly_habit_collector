@@ -1,5 +1,7 @@
 const cron = require('node-cron');
 
+const twitter_lib = require('./lib/twiiter');
+
 // const executionCycle = "0 50 23 * * *";
 const executionCycle = "*/30 * * * * *";
 
@@ -10,8 +12,10 @@ if (!cron.validate(executionCycle)) {
   process.exit(true);
 }
 
-const task = cron.schedule(executionCycle, () => {
+const task = cron.schedule(executionCycle, async () => {
   console.info("[INFO] RUN AUTOMATIC_HABIT_RECORDER. ");
+
+  twitter_lib.getMyTwitters();
 }, {
   schedule: false
 });
