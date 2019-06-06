@@ -14,8 +14,7 @@ if (!cron.validate(executionCycle)) {
 
 const task = cron.schedule(executionCycle, async () => {
   console.info("[INFO] RUN AUTOMATIC_HABIT_RECORDER. ");
-
-  twitter_lib.getMyTwitters();
+  const tweetsList = await twitter_lib.getMyTwitters();
 }, {
   schedule: false
 });
