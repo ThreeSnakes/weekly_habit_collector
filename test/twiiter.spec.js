@@ -5,15 +5,4 @@ describe("TEST Twiiter Module.", () => {
     const tweetList = await twiiter.getMyTwitters();
     if (tweetList.length) return done();
   });
-
-  // it("TEST pickTweetByHashTagAndDate", () => {
-  //   const mock_tweetList = [
-  //     {
-  //       created_at: 
-  //     },
-  //     {
-
-  //     }
-  //   ];
-  // });
 });
