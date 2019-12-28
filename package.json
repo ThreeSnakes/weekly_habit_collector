@@ -27,7 +27,7 @@
     "nyc": "^14.1.1"
   },
   "dependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "moment": "^2.24.0",
     "node-cron": "^2.0.3",
     "should": "^13.2.3",
