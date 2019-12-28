@@ -4,7 +4,7 @@
   "description": "automatic habit recorder",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha",
+    "test": "nyc mocha --reporter list",
     "start": "node index.js"
   },
   "repository": {
@@ -30,6 +30,7 @@
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "node-cron": "^2.0.3",
+    "should": "^13.2.3",
     "twitter": "^1.7.1"
   }
 }
