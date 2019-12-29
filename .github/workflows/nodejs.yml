@@ -1,0 +1,23 @@
+name: 트위터에서 일주일 단위로 올린 log 수집해서 메일로 쏴주기
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "00 22 * * 6"
+
+jobs:
+  fetch:
+    name: FetchTweet AND send Mail
+    runs-on: [ubuntu-latest]
+    steps:
+      - uses: actions/checkout@master
+      - name: Use Node.js 10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: 이슈 성
+        run: |
+          npm ci
+          npm start
