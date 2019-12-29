@@ -16,8 +16,8 @@ jobs:
       - name: Use Node.js 10.x
         uses: actions/setup-node@v1
         with:
-          node-version: 10.x
-      - name: 이슈 성
+          node-version: 10.16.0
+      - name: runner 실행
         run: |
           npm ci
           npm start
