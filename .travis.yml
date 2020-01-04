@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "8.9.3"
+  - "10.16.0"
 
 env:
   - FRAMEWORK=mocha CMD="mocha -R json" OUTFILE=mocha.json INSTALL="mocha chai unit.js" ANNOTATE_LOG=true
