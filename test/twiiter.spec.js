@@ -89,61 +89,7 @@ describe("TEST Twiiter Module.", () => {
     twiiter.getMyTwitters().then(() => done());
   }).timeout(3000);
 
-  it("test thisWeekTweet()", () => {
-    sampleTweet.map((tweet) => twiiter.thisWeekTweet(tweet)).should.eql([true, true, true, false]);
-  });
-
   it("test validTagTweet()", () => {
-    sampleTweet.map((tweet) => twiiter.validTagTweet(tweet)).should.eql([true, true, false, true]);
-  });
-
-  it("test filter", () => {
-    twiiter.filter(sampleTweet).should.eql([{
-      "created_at": "Sat Dec 28 14:20:29 +0000 2019",
-      "entities": {
-        "hashtags": [{
-          "text": "독서",
-          "indices": [
-            7,
-            10
-          ]
-        },
-        {
-          "text": "운동",
-          "indices": [
-            11,
-            14
-          ]
-        },
-        {
-          "text": "아침형인간",
-          "indices": [
-            15,
-            21
-          ]
-        }],
-        "symbols": [],
-        "user_mentions": [],
-        "urls": []
-      },
-      "text": "테스트456\n#독서 #운동 #아침형인간"
-    },
-    {
-      "created_at": "Sat Dec 28 14:19:03 +0000 2019",
-      "entities": {
-        "hashtags": [{
-          "text": "독서",
-          "indices": [
-            7,
-            10
-          ]
-        }],
-        "symbols": [],
-        "user_mentions": [],
-        "urls": []
-      },
-      "text": "테스트123\n#독서"
-    }
-    ]);
+    sampleTweet.map((tweet) => twiiter.validTagTweet(tweet)).should.eql([true, true, false, false]);
   });
 });
