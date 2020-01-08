@@ -91,64 +91,6 @@ describe("TEST util module.", () => {
   it('test classifyTweetContentByCreatedAt()', () => {
     classifyTweetContentByCreatedAt(sampleTweet).should.eql(
       {
-        "2019-12-28": [{
-          "created_at": "Sat Dec 28 14:20:29 +0000 2019",
-          "entities": {
-            "hashtags": [{
-              "text": "독서",
-              "indices": [
-                7,
-                10
-              ]
-            },
-            {
-              "text": "운동",
-              "indices": [
-                11,
-                14
-              ]
-            },
-            {
-              "text": "아침형인간",
-              "indices": [
-                15,
-                21
-              ]
-            }
-            ],
-            "symbols": [],
-            "user_mentions": [],
-            "urls": []
-          },
-          "text": "테스트456\n#독서 #운동 #아침형인간"
-        },
-        {
-          "created_at": "Sat Dec 28 14:19:03 +0000 2019",
-          "entities": {
-            "hashtags": [{
-              "text": "독서",
-              "indices": [
-                7,
-                10
-              ]
-            }],
-            "symbols": [],
-            "user_mentions": [],
-            "urls": []
-          },
-          "text": "테스트123\n#독서"
-        }
-        ],
-        "2019-12-26": [{
-          "created_at": "Wed Dec 25 21:01:52 +0000 2019",
-          "entities": {
-            "hashtags": [],
-            "symbols": [],
-            "user_mentions": [],
-            "urls": []
-          },
-          "text": "test 아아"
-        }],
         "2019-08-03": [{
           "created_at": "Sat Aug 03 00:05:49 +0000 2019",
           "entities": {
@@ -172,6 +114,62 @@ describe("TEST util module.", () => {
             }]
           },
           "text": "#Runtastic PRO 앱으로 54m 20s 동안 5.45 km 의 Runtastic 러닝를 방금 마침: https://t.co/ldi1RunjAO"
+        }],
+        "2019-12-26": [{
+          "created_at": "Wed Dec 25 21:01:52 +0000 2019",
+          "entities": {
+            "hashtags": [],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+          },
+          "text": "test 아아"
+        }],
+        "2019-12-28": [{
+          "created_at": "Sat Dec 28 14:19:03 +0000 2019",
+          "entities": {
+            "hashtags": [{
+              "text": "독서",
+              "indices": [
+                7,
+                10
+              ]
+            }],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+          },
+          "text": "테스트123\n#독서"
+        },
+        {
+          "created_at": "Sat Dec 28 14:20:29 +0000 2019",
+          "entities": {
+            "hashtags": [{
+              "text": "독서",
+              "indices": [
+                7,
+                10
+              ]
+            },
+            {
+              "text": "운동",
+              "indices": [
+                11,
+                14
+              ]
+            },
+            {
+              "text": "아침형인간",
+              "indices": [
+                15,
+                21
+              ]
+            }],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+          },
+          "text": "테스트456\n#독서 #운동 #아침형인간"
         }]
       }
     );
@@ -205,8 +203,7 @@ describe("TEST util module.", () => {
                 15,
                 21
               ]
-            }
-            ],
+            }],
             "symbols": [],
             "user_mentions": [],
             "urls": []
@@ -228,8 +225,7 @@ describe("TEST util module.", () => {
             "urls": []
           },
           "text": "테스트123\n#독서"
-        }
-        ],
+        }],
         "운동": [],
         "블로그": []
       }
