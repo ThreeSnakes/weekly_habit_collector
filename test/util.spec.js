@@ -126,22 +126,6 @@ describe("TEST util module.", () => {
           "text": "test 아아"
         }],
         "2019-12-28": [{
-          "created_at": "Sat Dec 28 14:19:03 +0000 2019",
-          "entities": {
-            "hashtags": [{
-              "text": "독서",
-              "indices": [
-                7,
-                10
-              ]
-            }],
-            "symbols": [],
-            "user_mentions": [],
-            "urls": []
-          },
-          "text": "테스트123\n#독서"
-        },
-        {
           "created_at": "Sat Dec 28 14:20:29 +0000 2019",
           "entities": {
             "hashtags": [{
@@ -170,6 +154,21 @@ describe("TEST util module.", () => {
             "urls": []
           },
           "text": "테스트456\n#독서 #운동 #아침형인간"
+        }, {
+          "created_at": "Sat Dec 28 14:19:03 +0000 2019",
+          "entities": {
+            "hashtags": [{
+              "text": "독서",
+              "indices": [
+                7,
+                10
+              ]
+            }],
+            "symbols": [],
+            "user_mentions": [],
+            "urls": []
+          },
+          "text": "테스트123\n#독서"
         }]
       }
     );
@@ -209,8 +208,7 @@ describe("TEST util module.", () => {
             "urls": []
           },
           "text": "테스트456\n#독서 #운동 #아침형인간"
-        },
-        {
+        }, {
           "created_at": "Sat Dec 28 14:19:03 +0000 2019",
           "entities": {
             "hashtags": [{
